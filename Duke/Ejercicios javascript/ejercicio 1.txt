@@ -1,0 +1,74 @@
+// write your code here
+var x = 3;
+var y = 2;
+var z = x + 2*y;
+print (x);
+print (y);
+print (z);
+
+
+//parte 2
+var x = 3;
+var y = 2;
+y = x ;
+print(x);
+print(y);
+
+//Practica con imagen
+var image = new SimpleImage("chapel.png");
+var w = image.getWidth();
+var h = image.getHeight();
+var p = image.getPixel(128,201);
+var r = image.getRed(128,201);
+var g = image.getGreen(128,201);
+print(w);
+print(h);
+print(p);
+print(r);
+print(g);
+print(image);
+
+//Funciones
+function square(x) {
+ var ans = x*x;
+ return ans;
+}
+
+var y =square(4);
+print(y);
+
+function cube(x) {
+    var ans =x*x*x;
+    return ans;
+    }
+    
+    var x = cube(2);
+    print(x);
+    
+function imagen(x){
+    var x = new SimpleImage(x);
+    var w = x.getWidth();
+    var h = x.getHeight();
+    var ans = w +" "+ h;
+    return ans;
+}
+//primer intento
+var a = new SimpleImage("chapel.png");
+var b = imagen(a);
+print(b);
+
+//obteniendo ancho y alto de imagen de forma eficiente
+var b = imagen("dinos.png");
+print(b);
+
+//funcion para concatenar palabras
+function palabras(x,y,z){
+    pal1 = x;
+    pal2 = y;
+    pal3 = z;
+    return ans =x + " " + y + " " + z;
+    
+}
+
+var pal = palabras("hola","como","estas");
+print(pal);

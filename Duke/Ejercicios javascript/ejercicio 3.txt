@@ -1,0 +1,107 @@
+// write your code here
+//Agrendo todo rojo
+var img = new SimpleImage("chapel.png");
+print(img);
+
+for (var pixel of img.values() ){
+    if (pixel.getRed() < 255){
+    var newR = pixel.setRed(255)
+    }
+}
+
+print(img);
+
+//Quitando rojo
+img = new SimpleImage("chapel.png");
+for (var pixel of img.values()){
+    if(pixel.getRed() >= 1 ){
+       pixel.setRed(0) ;
+    }
+}
+print(img);
+
+//Exercise 3 Red 70
+img = new SimpleImage("eastereggs.jpg");
+for (pixel of img.values()){
+    if (pixel.getRed() >= 70){
+       pixel.setRed(70);
+    }
+}
+print(img);
+
+// Exercise 4
+var image = new SimpleImage("astrachan.jpg");
+for (pixel of image.values()){
+    if (pixel.getY() >= 350){
+        pixel.setRed(0);
+        pixel.setGreen(0);
+        pixel.setBlue(0);
+    }
+}
+
+print(image);
+
+//Exercise 5
+var image = new SimpleImage("chapel.png");
+for (pixel of image.values()){
+    if(pixel.getY()<50){
+         if(pixel.getX()<50){
+            pixel.setRed(0);
+            pixel.setGreen(255);
+            pixel.setBlue(0);
+        }
+    }
+}
+
+print(image);
+
+//Exercise 6
+function topRightCorner(cornerWidth, cornerHeight, someImage, red, green, blue) {
+    var width = someImage.getWidth();
+    for (pixel of someImage.values()){
+        if (pixel.getY() < cornerHeight) {
+            if (pixel.getX() > width - cornerWidth){
+                 pixel.setRed(red);
+                pixel.setGreen(green);
+                pixel.setBlue(blue);
+            }
+        }
+    }
+    return someImage;
+    
+}
+
+var picture = new SimpleImage("chapel.png");
+var result = topRightCorner(30, 60, picture, 255, 255, 0);
+print(result);
+var picture2 = new SimpleImage("smalllion.jpg");
+var result2 = topRightCorner(125, 20, picture2, 255, 0, 0);
+print(result2);
+
+//Exercise 7
+
+function changeRed(width, height) {
+    var picture = new SimpleImage(width, height);
+    var red = 0;
+
+    for (pixel of picture.values()){
+        pixel.setRed(red);
+        pixel.setGreen(0);
+        pixel.setBlue(0);
+        
+        if(pixel.getRed() < 255){
+            red = red +1;
+        }
+            if(pixel.getRed() == 255){
+           red = 0;
+             }
+       
+    }
+        return picture;
+}
+
+    
+
+
+var result = changeRed(256,200);
+print(result);
