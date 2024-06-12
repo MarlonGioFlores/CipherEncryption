@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=GrayScale
+comment0.text=\r\n\ Write\ a\ description\ of\ GrayScale\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=inImage
+comment1.target=edu.duke.ImageResource\ makeGray(edu.duke.ImageResource)
+comment2.params=inImage
+comment2.target=edu.duke.ImageResource\ invertPixels(edu.duke.ImageResource)
+comment3.params=
+comment3.target=void\ selectAndInvert()
+comment4.params=
+comment4.target=void\ testGray()
+comment5.params=
+comment5.target=void\ testInvert()
+numComments=6

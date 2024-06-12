@@ -1,0 +1,52 @@
+// write your code here
+//Ejercicio 1
+
+function strippes (someImage){
+    var width = someImage.getWidth();
+
+    for(var pixel of image.values()){
+        x =pixel.getX();
+      
+            if (x < width/3){
+           pixel.setRed(255);
+         }
+         
+         if(x >= width/3 && x <= 2*(width/3)){
+             pixel.setGreen(255);
+         }
+         
+         if(x >= 2*(width/3)){
+             pixel.setBlue(255);
+         }
+    }
+    return(someImage);
+}
+
+var image = new SimpleImage("hilton.jpg");
+var result = strippes(image);
+print(result);
+
+//part 2
+//var image = new SimpleImage("hilton.jpg");
+// 
+//swapRedGreen();
+//}
+function swapRedGreen(someImage){
+    for (var pixel of image.values()){
+        
+     var newRed = pixel.getGreen();
+     var newGreen = pixel.getRed();
+     pixel.setGreen(newGreen);
+     pixel.setRed(newRed);
+     
+    }
+        
+    return someImage;
+    
+}
+
+var image = new SimpleImage("hilton.jpg");
+//var result = swapRedGreen(image);
+print(swapRedGreen(image));
+
+
